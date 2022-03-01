@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace用于指定当前xml和哪个接口映射，需要指定接口的文件路径，需要标注出来-->
+<mapper namespace="com.cy.store.Mapper.goodsMapper">
+
+    <!--自定义映射规则-->
+    <!--resultmap-->
+    <!--ID表示给这个映射规则分配一个唯一的id值,type表示查询结果与哪一个实体类进行结果集的映射   -->
+    <resultMap id="goodsEntityMap" type="com.cy.store.entity.goods">
+        <!--该处映射结果集和实体类,属性与表中字段不同的才需要映射-->
+        <!--主键不可以省略-->
+        <id column="goodsid" property="goodsId"></id>
+        <result column="goodsname" property="goodsName"></result>
+        <result column="goodsprice" property="goodsPrice"></result>
+        <result column="picture " property="picture"></result>
+        <result column="description " property="description"></result>
+    </resultMap>
+    <!--==========================================================================================-->
+
+    <select resultMap="goodsEntityMap" id="selectGoodsPage">
+
+    select * from t_goods
+
+    </select>
+</mapper>
