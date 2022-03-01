@@ -19,10 +19,7 @@
     </resultMap>
     <!--==========================================================================================-->
 
-    <select resultMap="goodsEntityMap" id="seleectGoodsPage">
-    select
-    <include refid="Base_Column_List" />
-    /*上面这行作用相当于*，这几把语句效率高*/
-    from t_goods;
+    <select resultMap="goodsEntityMap" id="selectGoodsPage">
+    select * from t_goods
     </select>
 </mapper>

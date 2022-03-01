@@ -1,8 +1,6 @@
 package com.cy.store.service;
 
-import com.cy.store.Mapper.UserMapper;
 import com.cy.store.entity.User;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 
